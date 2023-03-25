@@ -21,6 +21,14 @@ header>nav {
     color: red;
 }
 
+.logo img {
+    width: 150px;
+}
+
+.logo2 img {
+    width: 250px;
+}
+
 header>nav ul {
     display: flex;
     list-style: none;
@@ -237,6 +245,10 @@ footer>.container .info {
 
     header>nav ul li a {
         font-size: 12px;
+    }
+
+    .logo2 img {
+        width: 100px;
     }
 
     /* HOME--------------------- */
