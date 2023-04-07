@@ -134,6 +134,19 @@ header>nav ul {
 .about-product .box>.item img.animateX {
     animation: animateX 8s linear infinite;
 }
+
+.about-product .box .content button {
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    padding-inline: 10px;
+    background-color: #666;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
 @keyframes animateX {
     0% {
         transform: translateX(0);
