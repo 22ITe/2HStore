@@ -147,6 +147,10 @@ header>nav ul {
     cursor: pointer;
 }
 
+.about-product .box .content button:active {
+    background-color: #999;
+}
+
 @keyframes animateX {
     0% {
         transform: translateX(0);
