@@ -255,6 +255,61 @@ footer>.container .info {
     margin-top: 20px;
 }
 
+.fill {
+    display: none;
+    padding-block: 10px;
+    height: 600px;
+    max-width: 800px;
+    background-color: #696969;
+    border-radius: 3px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.fill::before {
+    content: '';
+    position: absolute;
+    inset: -70% -70% -70% -70%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+    cursor: pointer;
+}
+
+.fill button {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 50%;
+    border: none;
+    color: red;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.fill button:active {
+    background-color: #999;
+}
+
+.fill .title {
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+}
+
+.fill .content {
+    margin-top: 20px;
+    padding-inline: 20px;
+    font-size: 20px;
+    height: 500px;
+    overflow-y: auto;
+}
+
 @media (max-width: 740px) {
 
     header, footer {
@@ -306,5 +361,13 @@ footer>.container .info {
 
     .feature .box .item .content {
         margin-top: 40px;
+    }
+
+    .fill {
+        width: 80%;
+    }
+
+    .fill .content {
+        height: 450px;
     }
 }

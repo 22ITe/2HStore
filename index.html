@@ -78,7 +78,7 @@
                     <h2 class="title">Local sharing</h2>
                     <p>Local Sharing is a feature in the app that allows users to share and search for pre-owned items in their local area, reducing resource waste and creating opportunities to reuse valuable items.</p>
                 </div>
-                <button>See more</button>
+                <button onclick="showFill(api[0])">See more</button>
             </div>
             <div class="item">
                 <div class="img">
@@ -88,7 +88,7 @@
                     <h2 class="title">Connecting</h2>
                     <p>Connecting is a feature that connects users during the process of sharing used items, enhancing the user experience and creating a community of valuable item sharing within the local area through chat or direct call.</p>
                 </div>
-                <button>See more</button>
+                <button onclick="showFill(api[1])">See more</button>
             </div>
             <div class="item">
                 <div class="img">
@@ -98,7 +98,7 @@
                     <h2 class="title">Reverse auction</h2>
                     <p>The Saving feature is a special function that allows users to participate in a reverse auction for buying used products at the best price through Local Sharing and Connecting</p>
                 </div>
-                <button>See more</button>
+                <button onclick="showFill(api[2])">See more</button>
             </div>
         </div>
     </section>
@@ -133,5 +133,70 @@
         </div>
     </footer>
     
+    <div class="fill">
+        <button onclick="closeFill()">X</button>
+        <div class="title"><h1>Title</h1></div>
+        <div class="content">
+            <p>
+                Connecting is a feature that connects users during the process of sharing used items, enhancing the user experience and creating a community of valuable item sharing within the local area through chat or direct call.
+                Connecting is a feature that connects users during the process of sharing used items, enhancing the user experience and creating a community of valuable item sharing within the local area through chat or direct call.
+                Connecting is a feature that connects users during the process of sharing used items, enhancing the user experience and creating a community of valuable item sharing within the local area through chat or direct call.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        var api = [
+            {
+                title: 'Local sharing',
+                content: `Local sharing is an innovative concept that aims to promote sharing and exchanging pre-owned items within a specific geographic region or local area. It is a sustainable practice that not only reduces waste but also fosters a sense of community and encourages people to support their local economy.
+                <br> <br>
+                With local sharing, people can easily post items they no longer need and make them available for others to use. This can include anything from furniture, clothing, and electronics to books, toys, and household items. By sharing these items, people can reduce their environmental footprint, save money, and support their community.
+                <br> <br>
+                Local sharing can be facilitated through a variety of channels, such as mobile apps, websites, and social media platforms. Users can create accounts and post items they want to give away or exchange. Others in the same area can then search for items they need and make arrangements with the owner for pick-up or delivery.
+                <br>
+                One of the key benefits of local sharing is that it promotes sustainability and reduces waste. By sharing pre-owned items, people can extend the useful life of products and prevent them from ending up in landfills. This, in turn, reduces the demand for new products and conserves natural resources.
+                <br> <br>
+                Another benefit of local sharing is that it fosters a sense of community and encourages people to support their local economy. By sharing and exchanging goods with their neighbors, people can build relationships and create a network of support within their community. This can lead to stronger social ties, increased trust, and a greater sense of belonging.
+                <br> <br>
+                In conclusion, local sharing is a powerful tool for promoting sustainability, reducing waste, and building community. By encouraging people to share and exchange pre-owned items, we can create a more sustainable and equitable society for all.`
+            },
+            {
+                title: 'Connecting',
+                content: `Connecting is a feature that enables users to connect with others who share similar interests, hobbies, or goals. The feature allows users to find and join groups or communities based on specific topics, such as fitness, cooking, or travel.
+                <br> <br>
+                Connecting is a great way for users to expand their network, make new friends, and find support in achieving their goals. Users can join groups, participate in discussions, share tips and advice, and attend events and meetups.
+                <br> <br>
+                The feature also allows users to create their own groups and invite others to join. This way, users can connect with people who have similar interests or passions and build a community around a shared goal.
+                <br> <br>
+                Overall, Connecting is a valuable feature for users who want to expand their social circle, find support, and connect with like-minded people. It provides a platform for users to share their passions and interests, learn from others, and build meaningful relationships.`
+            },
+            {
+                title: 'Reverse Auction',
+                content: `Reverse Auction is a feature in the app that allows users to save money by bidding on pre-owned items. Instead of purchasing items at a fixed price, users can bid on items posted by other users, with the price decreasing over time.
+                <br> <br>
+                This feature is beneficial for both buyers and sellers. For buyers, it allows them to potentially purchase items at a lower price than they would in a traditional marketplace. For sellers, it can lead to more bids and potentially higher profits.
+                <br> <br>
+                To participate in a reverse auction, users can search for items they are interested in and then place bids. As more users bid on the item, the price decreases, with the auction ending when the timer runs out or when a user wins the auction.
+                <br> <br>
+                Overall, Reverse Auction is a unique feature that allows users to save money and potentially find great deals on pre-owned items. It is an excellent way for individuals to buy and sell items in a more dynamic and engaging manner.`
+            }
+        ]
+
+        const closeFill = () => {
+            let fillElement = document.querySelector('.fill');
+            fillElement.style.display = 'none';
+        }
+
+        const showFill = data => {
+            let fillElement = document.querySelector('.fill');
+            fillElement.style.display = 'block';
+            let titileFill = document.querySelector('.fill .title');
+            let contentFill = document.querySelector('.fill .content p');
+            titileFill.innerText = data.title;
+            contentFill.innerHTML = data.content;
+        }
+        
+    </script>
 </body>
 </html>
