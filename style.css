@@ -173,6 +173,7 @@ header>nav ul {
     height: 500px;
     flex: 1;
     margin: 10px;
+    text-align: center;
 }
 
 .feature .box .item .img {
@@ -197,6 +198,23 @@ header>nav ul {
     text-align: left;
     margin-top: 20px;
     font-size: 20px;
+    height: 140px;
+}
+
+.feature .box .item button {
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    padding-inline: 10px;
+    background-color: #666;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.feature .box .item button:active {
+    background-color: #999;
 }
 
 /* FOOTER */
